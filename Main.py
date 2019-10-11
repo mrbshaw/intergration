@@ -20,3 +20,10 @@ while True:
 subt = num1 - num2
 print("Based on the numbers you entered, your lucky number is:", + subt)
 
+start = True
+while start:
+    begin = input("When you are ready to start enter 'y', if you're not ready enter anything else: ")
+    if begin == 'y':
+        start = False
+
+print('Here we go!')
