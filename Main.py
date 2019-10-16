@@ -1,7 +1,7 @@
 #Robert Shaw
 #trivia game based of the Wheel of time books
 print("Welcome to My Trivia Game!")
-#A function
+#A function is a segment of code that performs a single task.
 #input two numbers from 1 to 10 to get a lucky number.
 def luckNumber():
     while True:
@@ -50,7 +50,7 @@ def trivGame():
         quest2 = True
         while quest2:
             qu2 = input(
-                "Question2: What is the title of book one?" + "\n[a] Wheel of Time" + "\n[b] Mars Attacks" + "\n[c] MistBorn" + "\n[d] The Way of Kings" + "\nAnswer: ")
+                "Question2: What is the title of book one?" + "\n[a] Eye of the World" + "\n[b] Mars Attacks" + "\n[c] MistBorn" + "\n[d] The Way of Kings" + "\nAnswer: ")
             if qu2 != 'a':
                 print("sorry that is incorrect.")
             elif qu2 == 'a':
