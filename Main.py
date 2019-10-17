@@ -2,6 +2,7 @@
 #trivia game based of the Wheel of time books
 print("Welcome to My Trivia Game!")
 #A function is a segment of code that performs a single task.
+
 #input two numbers from 1 to 10 to get a lucky number.
 def luckNumber():
     while True:
@@ -22,6 +23,7 @@ def luckNumber():
     subt = num1 - num2
     print("Based on the numbers you entered, your lucky number is:", + subt)
 
+#
 
 def trivGame():
     # promt to begin game.
@@ -30,7 +32,6 @@ def trivGame():
         begin = input("When you are ready to start enter 'y', if you're not ready enter anything else: ")
         if begin == 'y':
             start = False
-
     print('Here we go!')
     # gameRun to restart the again when finished
     gameRun = True
@@ -57,22 +58,18 @@ def trivGame():
                 playerScore += 1
                 print("Correct!" + " " + "your Score:", playerScore, "out of 10")
                 quest2 = False
-        # add a way for user only haves a temp
+        # add a way for user only haves a 3 temp
         quest3 = True
-        qu3 = input("Question3: ")
+        while quest3:
+            for qu3 in range(3):
+                qu3 = input(
+                    "Question3: In the book,The Eye of the world, which character says, In wars,boy, fools kill other fools for foolish causes. ?" + "\n[a] Min Farshaw" + "\n[b] Rand al'Thor" + "\n[c] Thom Merrilin" + "\n[d] Lanfear" + "\nAnswer: ")
+                if qu3 != 'c':
+                    print("Sorry that is incorrect")
+                elif qu3 == 'c':
+                    playerScore += 1
+                    print("Correct!" + " " + "your Score:", playerScore, "out of 10")
+                    quest3 = False
 
-#Put lucky number code and triva game in different functions to make a slection menu.
-runMenu = True
-while runMenu:
-    print("Enter Choice")
-    print("1. Find your Lucky number")
-    print("2. Play Trivia Game")
-    print("3. Quit")
-    selection = int(input("Enter: "))
-    if selection == 1:
-        luckNumber()
-    elif selection ==2:
-        trivGame()
-    elif selcetion ==3:
-        runMenu = False
+        quest4 = True
 
