@@ -2,9 +2,7 @@
 # trivia game based of the Wheel of time books
 print("Welcome to My Trivia Game!")
 
-
 # A function is a segment of code that performs a single task.
-
 # input two numbers from 1 to 10 to get a lucky number.
 def luckNumber():
     while True:
@@ -24,7 +22,6 @@ def luckNumber():
         print("Number out of range, please try again")
     subt = num1 - num2
     print("Based on the numbers you entered, your lucky number is:", + subt)
-
 
 def squareGame():
     l = int(input("Enter a Number: "))
