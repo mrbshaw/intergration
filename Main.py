@@ -1,9 +1,11 @@
-#Robert Shaw
-#trivia game based of the Wheel of time books
+# Robert Shaw
+# trivia game based of the Wheel of time books
 print("Welcome to My Trivia Game!")
-#A function is a segment of code that performs a single task.
 
-#input two numbers from 1 to 10 to get a lucky number.
+
+# A function is a segment of code that performs a single task.
+
+# input two numbers from 1 to 10 to get a lucky number.
 def luckNumber():
     while True:
         firstNumber = input("Enter a number between 1 and 10 to find your lucky number!: ")
@@ -14,7 +16,7 @@ def luckNumber():
             print("Number out of range, please try again")
 
     while True:
-        secondNumber=input("Enter Another Number between 1 and 10: ")
+        secondNumber = input("Enter Another Number between 1 and 10: ")
         num2 = int(secondNumber)
         if num2 <= 10 and num2 >= 0:
             break
@@ -23,7 +25,14 @@ def luckNumber():
     subt = num1 - num2
     print("Based on the numbers you entered, your lucky number is:", + subt)
 
-#
+
+def squareGame():
+    l = int(input("Enter a Number: "))
+    g = int(input("Enter another Number: "))
+    for x in range(l):
+        for x in range(g):
+            print("*" + " ", end=" ")
+        print()
 
 def trivGame():
     # promt to begin game.
@@ -32,7 +41,7 @@ def trivGame():
         begin = input("When you are ready to start enter 'y', if you're not ready enter anything else: ")
         if begin == 'y':
             start = False
-    print('Here we go!')
+    print('Here we go!' + "\nWheel of Time Trivia Game!")
     # gameRun to restart the again when finished
     gameRun = True
     while gameRun:
@@ -60,16 +69,112 @@ def trivGame():
                 quest2 = False
         # add a way for user only haves a 3 temp
         quest3 = True
-        while quest3:
-            for qu3 in range(3):
-                qu3 = input(
-                    "Question3: In the book,The Eye of the world, which character says, In wars,boy, fools kill other fools for foolish causes. ?" + "\n[a] Min Farshaw" + "\n[b] Rand al'Thor" + "\n[c] Thom Merrilin" + "\n[d] Lanfear" + "\nAnswer: ")
-                if qu3 != 'c':
-                    print("Sorry that is incorrect")
-                elif qu3 == 'c':
-                    playerScore += 1
-                    print("Correct!" + " " + "your Score:", playerScore, "out of 10")
-                    quest3 = False
+        while quest3:    
+            qu3 = input(
+                "Question3: In the book,The Eye of the world, which character says, In wars,boy, fools kill other fools for foolish causes. ?" + "\n[a] Min Farshaw" + "\n[b] Rand al'Thor" + "\n[c] Thom Merrilin" + "\n[d] Lanfear" + "\nAnswer: ")
+            if qu3 != 'c':
+                print("Sorry that is incorrect")
+            elif qu3 == 'c':
+                playerScore += 1
+                print("Correct!" + " " + "your Score:", playerScore, "out of 10")
+                quest3 = False
 
         quest4 = True
+        while quest4:
+            qu4 = input("Question4: Who is the Dragon reborn?" + "\n[a] Min Farshaw" + "\n[b] Rand al'Thor" + "\n[c] Thom Merrilin" + "\n[d] Lanfear" + "\nAnswer: ")
+            if qu3 != 'c':
+                print("Sorry that is incorrect")
+            elif qu4 == 'b':
+                playerScore += 1
+                print("Correct!" + " " + "your Score:", playerScore, "out of 10")
+                quest4 = False
+
+        quest5 = True
+        while quest5:
+            qu5= input(" Question5: Who finished the last two books?" + "\n[a] Robert Jordon" + "\n[b] Brandon Sanderson "+ "\n[c] Robert Shaw " + "\n[d] Tony the Tiger " + "\nAnswer: ")
+            if qu5 != 'b':
+                print("Sorry that is incorrect")
+            elif qu5== 'b':
+                playerScore += 1
+                print("Correct!" + " " + "your Score:", playerScore, "out of 10")
+                quest5 = False
+
+        quest6 = True
+        while quest6:
+            qu6 = input(
+                "Question6: Do Myrddraal have eyes ?" + "\n[a] Yes " + "\n[b] No " + "\nAnswer: ")
+            if qu6 != 'b':
+                print("Sorry that is incorrect")
+            elif qu6 == 'b':
+                playerScore += 1
+                print("Correct!" + " " + "your Score:", playerScore, "out of 10")
+                quest6 = False
+
+        quest7 = True
+        while quest7:
+            qu7 = input(
+                "Question7: Who made the Trollocs?" + "\n[a] Aginor " + "\n[b] Ishamael " + "\n[c] Balthamel " + "\n[d] Demandred " + "\nAnswer: ")
+            if qu7 != 'a':
+                print("Sorry that is incorrect")
+            elif qu7 == 'a':
+                playerScore += 1
+                print("Correct!" + " " + "your Score:", playerScore, "out of 10")
+                quest7 = False
+
+        quest8 = True
+        while quest8:
+            qu8 = input(
+                "Question8: My name was once Lillen Moiral, but now I am know as... ?" + "\n[a] Mesaana " + "\n[b] Semirhage " + "\n[c] Lanfear " + "\n[d] Moghedien " + "\nAnswer: ")
+            if qu8 != 'd':
+                print("Sorry that is incorrect")
+            elif qu8 == 'd':
+                playerScore += 1
+                print("Correct!" + " " + "your Score:", playerScore, "out of 10")
+                quest8 = False
+
+        quest9 = True
+        while quest9:
+            qu9 = input(
+                "Question9: Title of the last book?" + "\n[a] The Eye of the World " + "\n[b] A Memory of Light " + "\n[c] The Shining " + "\n[d] Dance Party boogalo " + "\nAnswer: ")
+            if qu9 != 'b':
+                print("Sorry that is incorrect")
+            elif qu9 == 'b':
+                playerScore += 1
+                print("Correct!" + " " + "your Score:", playerScore, "out of 10")
+                quest9= False
+
+        quest10 = True
+        while quest10:
+            qu10 = input(
+                "Question10:How many wifes did the Dragon have at the end of the books?" + "\n[a] 2 " + "\n[b] 3 " + "\n[c] 4 " + "\n[d] 2 " + "\nAnswer: ")
+            if qu10 != 'b':
+                print("Sorry that is incorrect")
+            elif qu10 == 'b':
+                playerScore += 1
+                print("Correct!" + " " + "your Score:", playerScore, "out of 10")
+                quest10 = False
+        print("You have completed the game!" + "\nFinal score: " , playerScore)
+        playagain = input("Type 'y' to play again, type anything else to return to menu"+ "\nEnter: ")
+        if playagain != 'y':
+            gameRun= False
+        else:
+            trivGame()
+
+# Put lucky number code and triva game in different functions to make a slection menu.
+runMenu = True
+while runMenu:
+    print("Enter Choice")
+    print("1. Find your Lucky number")
+    print("2. Play Trivia Game")
+    print("3. Make a square")
+    print("4. Quit")
+    selection = int(input("Enter: "))
+    if selection == 1:
+        luckNumber()
+    elif selection == 2:
+        trivGame()
+    elif selection ==3:
+        squareGame()
+    elif selection == 4:
+        runMenu = False
 
