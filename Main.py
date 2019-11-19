@@ -5,21 +5,32 @@ print("Welcome to My Trivia Game!")
 # A function is a segment of code that performs a single task.
 # input two numbers from 1 to 10 to get a lucky number.
 def luckNumber():
-    while True:
-        firstNumber = input("Enter a number between 1 and 10 to find your lucky number!: ")
-        num1 = int(firstNumber)
-        if num1 <= 10 and num1 >= 0:
-            break
-        else:
-            print("Number out of range, please try again")
+    input_bad = True
+    while input_bad:
+        try:
+            firstNumber = input("Enter a number between 1 and 10 to find your lucky number!: ")
+            num1 = int(firstNumber)
+            if num1 <= 10 and num1 >= 0:
+                input_bad = False
+            else:
+                print("Number out of range or isn't a whole number, please try again")
 
-    while True:
-        secondNumber = input("Enter Another Number between 1 and 10: ")
-        num2 = int(secondNumber)
-        if num2 <= 10 and num2 >= 0:
-            break
-    else:
-        print("Number out of range, please try again")
+        except ValueError:
+            print("Number out of range or isn't a whole number, please try again")
+
+    input_bad2 = True
+    while input_bad2:
+        try:
+            secondNumber = input("Enter Another Number between 1 and 10: ")
+            num2 = int(secondNumber)
+            if num2 <= 10 and num2 >= 0:
+                input_bad2 = False
+            else:
+                print("Number out of range or isn't a whole number, please try again")
+
+        except ValueError:
+            print("Number out of range or isn't a whole number, please try again")
+
     subt = num1 - num2
     print("Based on the numbers you entered, your lucky number is:", + subt)
 
