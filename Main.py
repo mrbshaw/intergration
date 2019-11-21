@@ -1,7 +1,7 @@
 """
 This is my main file for this program.
 __author__ = Robert Shaw Jr.
-Code from Prof. Van. examples in class AND Python Activity 1 -13.
+Code from Prof. Van. AND Python Activity 1 -13.
 """
 # Trivia game based of the Wheel of time books.
 print("Welcome to My Trivia Game!")
@@ -9,7 +9,20 @@ print("Welcome to My Trivia Game!")
 
 # A function is a segment of code that performs a single task.
 def run_pay():
+    """
+to run this from menu.
+    :return:
+    """
+
     def compute_pay(hrs, rt):
+        """
+        computes rate of pay by calling hrs and rt and if hours over 40,
+        does time and a half. 
+
+        :param hrs: hours worked
+        :param rt: rate of pay
+        :return: computes hours work and overtime pay
+        """
         if hrs > 40:
             reg = fh * fr
             otp = (fh - 40.0) * (fr * 0.5)
@@ -104,8 +117,8 @@ def triv_game():
             start = False
     print('Here we go!' + "\nWheel of Time Trivia Game!")
     # game_Run to restart the again when finished
-    game_Run = True
-    while game_Run:
+    game_run = True
+    while game_run:
         player_score = 0
         quest_1 = True
         while quest_1:
@@ -257,7 +270,7 @@ def triv_game():
             "Type 'y' to play again, type anything else to return"
             " to menu" + "\nEnter: ")
         if play_again != 'y':
-            game_Run = False
+            game_run = False
         else:
             triv_game()
 
