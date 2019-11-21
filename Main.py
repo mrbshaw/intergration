@@ -1,7 +1,7 @@
 """
 This is my main file for this program.
 __author__ = Robert Shaw Jr.
-Code from Prof. Van. AND Python Activity 1 -13.
+Code from Prof. Van. examples in class AND Python Activity 1 -13.
 """
 # Trivia game based of the Wheel of time books.
 print("Welcome to My Trivia Game!")
